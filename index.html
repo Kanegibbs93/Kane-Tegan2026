@@ -3,171 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kane & Tegan</title>
+    <title>Kane and Tegan Wedding</title>
     <style>
-        body {
-            font-family: 'Georgia', serif;
+        /* Reset styles */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #fdf8f4;
-            color: #5a4a3f;
+            box-sizing: border-box;
         }
 
-        header {
-            background: url('https://via.placeholder.com/1920x600/ccbbaa/ffffff?text=Rustic+Wedding+Banner') no-repeat center center;
-            background-size: cover;
-            text-align: center;
-            padding: 3rem 0;
+        /* Fullscreen layout */
+        body {
+            font-family: 'Arial', sans-serif;
             color: #ffffff;
-        }
-
-        header h1 {
-            font-size: 3rem;
+            background-color: #800020; /* Burgundy */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
             margin: 0;
+            text-align: center;
         }
 
-        header p {
-            font-size: 1.5rem;
-            margin: 1rem 0 0;
-        }
-
+        /* Navigation bar */
         nav {
-            background-color: #8b6d5a;
-            padding: 1rem;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px 0;
             text-align: center;
         }
 
         nav a {
             color: #ffffff;
             text-decoration: none;
-            margin: 0 1rem;
             font-size: 1.2rem;
-        }
-
-        section {
-            padding: 2rem;
-            max-width: 800px;
-            margin: 2rem auto;
-            background-color: #ffffff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        section h2 {
-            font-size: 2rem;
-            border-bottom: 2px solid #ccbbaa;
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
-        }
-
-        footer {
-            background-color: #5a4a3f;
-            color: #ffffff;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
-        }
-
-        button {
-            background-color: #ccbbaa;
-            border: none;
-            padding: 0.8rem 1.5rem;
-            font-size: 1rem;
-            cursor: pointer;
-            color: #ffffff;
-        }
-
-        button:hover {
-            background-color: #b89a84;
-        }
-
-        form input, form select, form textarea {
-            width: 100%;
-            padding: 0.8rem;
-            margin: 0.5rem 0;
-            border: 1px solid #ccbbaa;
+            margin: 0 15px;
+            padding: 5px 10px;
             border-radius: 5px;
         }
 
-        form input[type="submit"] {
-            background-color: #8b6d5a;
-            color: #ffffff;
-            border: none;
-            cursor: pointer;
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
         }
 
-        form input[type="submit"]:hover {
-            background-color: #735441;
+        /* Welcome section */
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 10px;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
+    <!-- Navigation menu -->
+    <nav>
+        <a href="#rsvp">RSVP</a>
+        <a href="#about">About</a>
+        <a href="#venue">Venue</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-<header>
-    <h1>Welcome to Our Wedding</h1>
-    <p>Join us as we celebrate our love on [Wedding Date]</p>
-</header>
+    <!-- Welcome message -->
+    <main>
+        <h1>Kane and Tegan Wedding</h1>
+        <h2>19/08/2026</h2>
+    </main>
 
-<nav>
-    <a href="#about">About Us</a>
-    <a href="#details">Event Details</a>
-    <a href="#rsvp">RSVP</a>
-    <a href="#registry">Registry</a>
-    <a href="#photos">Gallery</a>
-    <a href="#guestbook">Guestbook</a>
-</nav>
-
-<section id="about">
-    <h2>About Us</h2>
-    <p>[Insert your story about how you met, fell in love, and your journey together.]</p>
-</section>
-
-<section id="details">
-    <h2>Event Details</h2>
-    <p><strong>Ceremony:</strong> [Location, Time, Date]</p>
-    <p><strong>Reception:</strong> [Location, Time, Date]</p>
-    <p><strong>Accommodations:</strong> We’ve reserved rooms at [Hotel Name]. Let us know if you need one!</p>
-</section>
-
-<section id="rsvp">
-    <h2>RSVP</h2>
-    <form action="/submit-rsvp" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <select name="attendance" required>
-            <option value="">Will you attend?</option>
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
-        </select>
-        <textarea name="message" placeholder="Leave us a note (optional)"></textarea>
-        <select name="room-needed">
-            <option value="">Do you need a room?</option>
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
-        </select>
-        <input type="submit" value="Submit RSVP">
-    </form>
-</section>
-
-
-</section>
-
-<section id="photos">
-    <h2>Gallery</h2>
-    <p>Coming soon: Our engagement photos and memories!</p>
-</section>
-
-<section id="guestbook">
-    <h2>Guestbook</h2>
-    <p>Leave a message for the happy couple:</p>
-    <form action="/submit-guestbook" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <textarea name="message" placeholder="Write your message here" required></textarea>
-        <input type="submit" value="Sign Guestbook">
-    </form>
-</section>
-
-<footer>
-    <p>© [Year] [Your Names]. All Rights Reserved.</p>
-</footer>
-
+    <!-- Footer -->
+    <footer>
+        &copy; 2026 Kane and Tegan Wedding. All rights reserved.
+    </footer>
 </body>
 </html>
